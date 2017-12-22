@@ -2,6 +2,13 @@
  * Globals
  */
 
+  details summary::-webkit-details-marker { display:none; }
+
+  @keyframes sweep {
+    0%    {opacity: 0; margin-left: -10px}
+    100%  {opacity: 1; margin-left: 0px}
+  }
+
   body {
     font-family: Georgia, "Times New Roman", Times, serif;
     color: #555;
@@ -10,6 +17,7 @@
 
   main{
     margin-bottom: 100px;
+    margin-right: 20px;
   }
   
   h1,  .h1,  h2, .h2,  h3,  .h3,  h4,  .h4,  h5,  .h5,  h6,  .h6 {
@@ -98,16 +106,17 @@
   }
   
   .prof-name{
-    max-height: 100%;
     max-width: 100%;
     text-align: center;
     color: #ffffff;
-    line-height: 55px;
+    padding: 10px;
+    margin: 0px;
   }
 
   .sidebar-module li.profile-tag-row{
-    height: 55px;
+    height: relative;
     margin: 3px;
+    padding: 4px 0px 10px 0px;
     background-color: #4286CA;
     font-family: "Roboto", sans-serif;
     -moz-box-shadow: 1px 1px 1px rgba(0,0,0,.5);
@@ -119,7 +128,7 @@
   }
 
   .sidebar-module li.profile-tag-row-header{
-    height: 55px;
+    height: relative;
     margin: 3px;
     background-color: #213E65;
     font-family: "Roboto", sans-serif;
@@ -137,16 +146,18 @@
   p.profile-tag{
     margin: 0;
     padding: 0;
+    word-wrap: break-word
   }
 
-  .prof-text{
+  .prof-link{
     color: #ffffff;
     text-decoration: none;
+    font-size: 14px;
   }
 
   .prof-icon{
     color: #ffffff;
-    line-height: 55px;
+    line-height: 50px;
   }
 
   p.prof-detail{
@@ -203,4 +214,32 @@
     max-width: 100%;
     padding:1px;
     border:2px solid #4286CA;
+  }
+
+  .profile-section-title{
+    margin-bottom: 5px;
+    padding: 0;
+    color: #4286CA;
+    font-weight: bold;
+  }
+
+  /*
+   * Transitioning details and summary
+   */
+
+  details{
+    transition: height .7s ease;
+    overflow: hidden;
+  }
+  details.no50:not([open]){ height: 50px;}
+  details.o100[open] {height: 100px;}
+  details.o120[open] {height: 120px;}
+  details.o140[open] {height: 140px;}
+  details.o160[open] {height: 160px;}
+  details.o180[open] {height: 180px;}
+  details.o200[open] {height: 200px;}
+  details ul{
+    padding-left: 15px;
+    color: #ffffff;
+    font-size: 12px;
   }
