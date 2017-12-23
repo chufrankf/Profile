@@ -4,6 +4,7 @@ module.exports = function(app){
 
     //Home
     app.get("/",function(req,res){res.sendFile(views + "index.html")});
+    app.get("/projects",function(req,res){res.sendFile(views + "projects.html")});
 
     //Links
     //app.get("/signin",function(req,res){res.sendFile(views + "login_signin.html")});
