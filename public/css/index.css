@@ -83,19 +83,23 @@
   p.profile-tag.profile-tag-header{
     padding-top: 3px;
     font-weight: bold;
+    font-size:16px;
     color: #ffffff9a;
   }
 
   p.profile-tag{
     margin: 0;
     padding: 0;
-    word-wrap: break-word
+    word-wrap: break-word;
+    color: #ffffff;
+    font-size: 14px;
   }
 
-  .prof-link{
-    color: #ffffff;
+  a.prof-link{
     text-decoration: none;
-    font-size: 14px;
+  }
+  a.prof-link:hover{
+    text-decoration: none;
   }
 
   .prof-icon{
