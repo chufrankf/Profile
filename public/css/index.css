@@ -66,8 +66,16 @@
     -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.5);
     box-shadow: 1px 1px 1px rgba(0,0,0,.5);
   }
-  .sidebar-module li.profile-tag-row.hoverable:hover{
+
+  .sidebar-module li.profile-tag-row .card{
+    background-color: #4286CA;
+    text-decoration: none;
+    border: none;
+  }
+  
+  .sidebar-module li.profile-tag-row .card:hover{
     background-color: rgb(89, 147, 206);
+    text-decoration: none;
   }
 
   .sidebar-module li.profile-tag-row-header{
@@ -113,6 +121,10 @@
     text-decoration: none;
     padding: 3px;
     margin: 0px;
+  }
+
+  p.prof-detail:hover{
+    text-decoration: none;
   }
 
   /*
@@ -188,6 +200,12 @@
    */
 
   details ul{
+    padding-left: 15px;
+    color: #ffffff;
+    font-size: 12px;
+  }
+
+  ul[type="disc"]{
     padding-left: 15px;
     color: #ffffff;
     font-size: 12px;

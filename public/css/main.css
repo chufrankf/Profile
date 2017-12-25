@@ -60,3 +60,6 @@
     border-left: .3rem solid transparent;
   }
   
+  a.no-underline{
+    text-decoration: none;
+  }
